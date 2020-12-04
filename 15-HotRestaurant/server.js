@@ -21,6 +21,7 @@ app.get("/reserve", function (req, res) {
   res.sendFile(path.join(__dirname, "./reserve.html"));
 });
 
+app.use(express.static("./assets"));
 
 app.listen(PORT, function () {
   console.log("app listening on PORT " + PORT);
